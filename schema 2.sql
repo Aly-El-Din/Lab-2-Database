@@ -61,51 +61,63 @@ create table BOOK_LOANS(
 
 INSERT INTO PUBLISHER (Name, Address, Phone)
 VALUES
-('Penguin Books', '375 Hudson St, New York, NY', '2123662000'),
+('Penguin Books', '80 Strand, London, UK', '442078756444'),
 ('HarperCollins', '195 Broadway, New York, NY', '2122077000'),
-('Simon & Schuster', '1230 Avenue of the Americas, New York, NY', '2126987000');
+('Simon & Schuster', '1230 Avenue of the Americas, New York, NY', '2126987000'),
+('Macmillan', '120 Broadway, New York, NY', '2127258600');
+
 
 INSERT INTO BOOK (Book_id, Title, Publisher_name)
 VALUES
-(1, 'The Great Gatsby', 'Penguin Books'),
-(2, 'To Kill a Mockingbird', 'HarperCollins'),
-(3, '1984', 'Penguin Books'),
-(4, 'The Catcher in the Rye', 'Simon & Schuster');
+(18, 'To Kill a Mockingbird', 'HarperCollins'),
+(19, 'The Great Gatsby', 'Penguin Books'),
+(20, 'The Catcher in the Rye', 'Simon & Schuster'),
+(21, '1984', 'Penguin Books'),
+(22, 'Brave New World', 'Macmillan'),
+(23, 'Fahrenheit 451', 'Simon & Schuster');
+
 
 INSERT INTO BOOK_AUTHORS (Book_id, Author_name)
 VALUES
-(1, 'F. Scott Fitzgerald'),
-(2, 'Harper Lee'),
-(3, 'George Orwell'),
-(4, 'J.D. Salinger');
+(18, 'Harper Lee'),
+(19, 'F. Scott Fitzgerald'),
+(20, 'J.D. Salinger'),
+(21, 'George Orwell'),
+(22, 'Aldous Huxley'),
+(23, 'Ray Bradbury');
 
 INSERT INTO LIBRARY_BRANCH (Branch_id, Branch_name, Address)
 VALUES
-(1, 'Downtown Branch', '100 Main St, New York, NY'),
-(2, 'Uptown Branch', '500 Broadway, New York, NY'),
-(3, 'Midtown Branch', '350 5th Ave, New York, NY');
-
+(8, 'Downtown Branch', '123 Main St, Los Angeles, CA'),
+(9, 'Uptown Branch', '456 Broadway St, Los Angeles, CA'),
+(10, 'Midtown Branch', '789 Pine St, San Francisco, CA');
 
 INSERT INTO BOOK_COPIES (Book_id, Branch_id, No_of_copies)
 VALUES
-(1, 1, 3),
-(1, 2, 2),
-(2, 1, 4),
-(2, 3, 5),
-(3, 1, 6),
-(3, 2, 4),
-(4, 3, 2);
+(18, 8, 3),
+(18, 9, 5),
+(19, 8, 4),
+(20, 9, 2),
+(21, 10, 6),
+(22, 8, 3),
+(23, 9, 7);
+
 
 INSERT INTO BORROWER (Card_no, Name, Address, Phone)
 VALUES
-(1001, 'John Doe', '123 Maple St, New York, NY', '2125551234'),
-(1002, 'Jane Smith', '456 Oak St, New York, NY', '2125555678'),
-(1003, 'Bob Johnson', '789 Pine St, New York, NY', '2125558765');
+(1010, 'Angela Martin', '845 Maple Ave, Los Angeles, CA', '2135556789'),
+(1011, 'Oscar Martinez', '152 Elm St, Los Angeles, CA', '2135559988'),
+(1012, 'Kevin Malone', '321 Oak St, Los Angeles, CA', '2135557788'),
+(1013, 'Meredith Palmer', '456 Palm Dr, San Francisco, CA', '4155551122');
 
 
 INSERT INTO BOOK_LOANS (Book_id, Branch_id, Card_no, Date_out, Due_date)
 VALUES
-(1, 1, 1001, '2024-10-10', '2024-11-10'),
-(2, 3, 1002, '2024-10-15', '2024-11-15'),
-(3, 1, 1003, '2024-10-20', '2024-11-20'),
-(4, 2, 1001, '2024-10-18', '2024-11-18');
+(18, 8, 1010, '2024-10-15', '2024-11-15'),
+(19, 8, 1011, '2024-10-16', '2024-11-16'),
+(20, 9, 1012, '2024-10-17', '2024-11-17'),
+(21, 10, 1013, '2024-10-18', '2024-11-18'),
+(22, 8, 1011, '2024-10-19', '2024-11-19'),
+(23, 9, 1012, '2024-10-20', '2024-11-20');
+
+
